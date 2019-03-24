@@ -1,6 +1,7 @@
 ## jvm-handwriting
+>动手实践jvm
 
-动手实践jvm, 整理自[张秀宏](https://github.com/zxh0)的书籍和源码，顺便练练go语言。
+`write your own java virtual machine.`整理自[张秀宏](https://github.com/zxh0)的书籍和源码，顺便练练go语言。
 
 
 来自《深入理解java虚拟机》作者周志明
