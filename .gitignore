@@ -10,3 +10,12 @@
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
+
+# mac
+.DS_Store
+
+# idea ignore
+.idea/
+*.ipr
+*.iml
+*.iws
