@@ -1,7 +1,9 @@
 package classfile
 
-import "fmt"
-import "unicode/utf16"
+import (
+	"fmt"
+	"unicode/utf16"
+)
 
 /*
 CONSTANT_Utf8_info {

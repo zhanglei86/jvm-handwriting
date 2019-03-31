@@ -1,7 +1,9 @@
 package control
 
-import "jvmgo/instructions/base"
-import "jvmgo/rtda"
+import (
+	"jvmgo/instructions/base"
+	"jvmgo/rtda"
+)
 
 // Branch always
 type GOTO struct{ base.BranchInstruction }

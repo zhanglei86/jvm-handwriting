@@ -1,7 +1,9 @@
 package extended
 
-import "jvmgo/instructions/base"
-import "jvmgo/rtda"
+import (
+	"jvmgo/instructions/base"
+	"jvmgo/rtda"
+)
 
 // Branch always (wide index)
 type GOTO_W struct {

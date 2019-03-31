@@ -1,7 +1,9 @@
 package comparisons
 
-import "jvmgo/instructions/base"
-import "jvmgo/rtda"
+import (
+	"jvmgo/instructions/base"
+	"jvmgo/rtda"
+)
 
 // Branch if int comparison succeeds
 type IF_ICMPEQ struct{ base.BranchInstruction }

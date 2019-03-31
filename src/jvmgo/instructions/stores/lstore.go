@@ -1,7 +1,9 @@
 package stores
 
-import "jvmgo/instructions/base"
-import "jvmgo/rtda"
+import (
+	"jvmgo/instructions/base"
+	"jvmgo/rtda"
+)
 
 // Store long into local variable
 type LSTORE struct{ base.Index8Instruction }

@@ -1,7 +1,9 @@
 package math
 
-import "jvmgo/instructions/base"
-import "jvmgo/rtda"
+import (
+	"jvmgo/instructions/base"
+	"jvmgo/rtda"
+)
 
 // Shift left int
 type ISHL struct{ base.NoOperandsInstruction }

@@ -1,7 +1,9 @@
 package math
 
-import "jvmgo/instructions/base"
-import "jvmgo/rtda"
+import (
+	"jvmgo/instructions/base"
+	"jvmgo/rtda"
+)
 
 // Increment local variable by constant
 type IINC struct {

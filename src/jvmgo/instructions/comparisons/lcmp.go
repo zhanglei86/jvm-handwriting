@@ -1,7 +1,9 @@
 package comparisons
 
-import "jvmgo/instructions/base"
-import "jvmgo/rtda"
+import (
+	"jvmgo/instructions/base"
+	"jvmgo/rtda"
+)
 
 // Compare long
 type LCMP struct{ base.NoOperandsInstruction }

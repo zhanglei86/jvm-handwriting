@@ -1,7 +1,9 @@
 package math
 
-import "jvmgo/instructions/base"
-import "jvmgo/rtda"
+import (
+	"jvmgo/instructions/base"
+	"jvmgo/rtda"
+)
 
 // Divide double
 type DDIV struct{ base.NoOperandsInstruction }

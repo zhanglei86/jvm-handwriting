@@ -1,7 +1,9 @@
 package constants
 
-import "jvmgo/instructions/base"
-import "jvmgo/rtda"
+import (
+	"jvmgo/instructions/base"
+	"jvmgo/rtda"
+)
 
 // Do nothing
 type NOP struct{ base.NoOperandsInstruction }
