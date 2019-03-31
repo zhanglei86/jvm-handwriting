@@ -16,7 +16,7 @@ func main() {
 	} else if cmd.helpFlag || cmd.class == "" {
 		printUsage()
 	} else {
-		startJVM(cmd)
+		startJVM05(cmd)
 	}
 }
 
@@ -42,10 +42,22 @@ func startJVM03(cmd *Cmd) {
 	printClassInfo(cf)
 }
 
-func startJVM(cmd *Cmd) {
+func startJVM04(cmd *Cmd) {
 	frame := rtda.NewFrame(100, 100)
 	testLocalVars(frame.LocalVars())
 	testOperandStack(frame.OperandStack())
+}
+
+func startJVM05(cmd *Cmd) {
+	cp := classpath.Parse(cmd.XjreOption, cmd.cpOption)
+	className := strings.Replace(cmd.class, ".", "/", -1)
+	cf := loadClass(className, cp)
+	mainMethod := getMainMethod(cf)
+	if mainMethod != nil {
+		interpret(mainMethod)
+	} else {
+		fmt.Printf("Main method not found in class %s\n", cmd.class)
+	}
 }
 
 // ch03需要的
@@ -115,4 +127,14 @@ func testOperandStack(ops *rtda.OperandStack) {
 	println(ops.PopLong())
 	println(ops.PopInt())
 	println(ops.PopInt())
+}
+
+// ch05需要的
+func getMainMethod(cf *classfile.ClassFile) *classfile.MemberInfo {
+	for _, m := range cf.Methods() {
+		if m.Name() == "main" && m.Descriptor() == "([Ljava/lang/String;)V" {
+			return m
+		}
+	}
+	return nil
 }
