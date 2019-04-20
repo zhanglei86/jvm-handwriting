@@ -10,17 +10,18 @@ func mainCh04() {
 	if cmd.versionFlag {
 		fmt.Println("version 0.0.4")
 	} else {
-		startJVM04(cmd)
+		startJVM04()
 	}
 }
 
-func startJVM04(cmd *Cmd) {
-	frame := rtda.NewFrame(100, 100)
+func startJVM04() {
+	frame := rtda.NewFrame(20, 35)
 	testLocalVars(frame.LocalVars())
 	testOperandStack(frame.OperandStack())
 }
 
 func testLocalVars(vars rtda.LocalVars) {
+	fmt.Printf("test1,localVars==>\n")
 	vars.SetInt(0, 100)
 	vars.SetInt(1, -100)
 	vars.SetLong(2, 2997924580)
@@ -38,6 +39,7 @@ func testLocalVars(vars rtda.LocalVars) {
 }
 
 func testOperandStack(ops *rtda.OperandStack) {
+	fmt.Printf("test2,operandStack==>\n")
 	ops.PushInt(100)
 	ops.PushInt(-100)
 	ops.PushLong(2997924580)

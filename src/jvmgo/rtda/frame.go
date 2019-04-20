@@ -9,7 +9,7 @@ type Frame struct {
 	nextPC       int // the next instruction after the call
 }
 
-// expire
+// testCh04 used
 func NewFrame(maxLocals, maxStack uint) *Frame {
 	return &Frame{
 		localVars:    newLocalVars(maxLocals),
