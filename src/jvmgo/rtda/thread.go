@@ -1,5 +1,7 @@
 package rtda
 
+import "jvmgo/rtda/heap"
+
 /*
 JVM
   Thread
@@ -39,6 +41,10 @@ func (self *Thread) CurrentFrame() *Frame {
 	return self.stack.top()
 }
 
-func (self *Thread) NewFrame(maxLocals, maxStack uint) *Frame {
-	return newFrame(self, maxLocals, maxStack)
+func (self *Thread) NewFrameCh05(maxLocals, maxStack uint) *Frame {
+	return newFrameCh05(self, maxLocals, maxStack)
+}
+
+func (self *Thread) NewFrame(method *heap.Method) *Frame {
+	return newFrame(self, method)
 }

@@ -15,7 +15,7 @@ func mainCh04() {
 }
 
 func startJVM04() {
-	frame := rtda.NewFrame(20, 35)
+	frame := rtda.NewFrameCh04(20, 35)
 	testLocalVars(frame.LocalVars())
 	testOperandStack(frame.OperandStack())
 }

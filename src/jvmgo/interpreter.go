@@ -6,6 +6,7 @@ import (
 	"jvmgo/instructions"
 	"jvmgo/instructions/base"
 	"jvmgo/rtda"
+	"jvmgo/rtda/heap"
 )
 
 func interpret(methodInfo *classfile.MemberInfo) {
@@ -15,11 +16,20 @@ func interpret(methodInfo *classfile.MemberInfo) {
 	bytecode := codeAttr.Code()
 
 	thread := rtda.NewThread()
-	frame := thread.NewFrame(maxLocals, maxStack)
+	frame := thread.NewFrameCh05(maxLocals, maxStack)
 	thread.PushFrame(frame)
 
 	defer catchErr(frame)
 	loop(thread, bytecode)
+}
+
+func interpretCh06(method *heap.Method) {
+	thread := rtda.NewThread()
+	frame := thread.NewFrame(method)
+	thread.PushFrame(frame)
+
+	defer catchErr(frame)
+	loop(thread, method.Code())
 }
 
 func catchErr(frame *rtda.Frame) {
