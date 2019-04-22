@@ -10,8 +10,8 @@ type DADD struct{ base.NoOperandsInstruction }
 
 func (self *DADD) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
-	v1 := stack.PopDouble()
 	v2 := stack.PopDouble()
+	v1 := stack.PopDouble()
 	result := v1 + v2
 	stack.PushDouble(result)
 }
