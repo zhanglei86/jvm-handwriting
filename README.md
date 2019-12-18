@@ -10,5 +10,23 @@
 xx, 一步步完成java虚拟机的各个组成部分，在动手的过程中了解jvm的运行原理。
 
 
+### note
+
+debug
+```
+ch2的
+bin/jvmgo -Xjre /Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/jre java.lang.Object 123
+ch03,04
+bin/jvmgo -Xjre /Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/jre class/ch03/ClassFileTest
+ch05
+bin/jvmgo -Xjre /Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/jre class/ch05/GaussTest
+ch06
+bin/jvmgo -Xjre /Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/jre class/ch06/MyObject
+jvmgo/book/ch06/MyObject
+```
+
+
 ### READ
 xx
+
+- http://www.runoob.com/
